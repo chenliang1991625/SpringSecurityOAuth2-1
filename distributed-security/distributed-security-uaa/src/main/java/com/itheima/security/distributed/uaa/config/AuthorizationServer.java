@@ -20,6 +20,7 @@ import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+
 import javax.sql.DataSource;
 import java.util.Arrays;
 /**
@@ -125,7 +126,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
                 .checkTokenAccess("permitAll()")                  //oauth/check_token公开:校验token的站点是公开的
                 .allowFormAuthenticationForClients();				//表单认证方式(申请令牌）
     }
-//    客户端授权endpoint：http://localhost:53020/uaa/oauth/authorize?response_type=code&client_id=c1
+//    授权endpoint：http://localhost:53020/uaa/oauth/authorize?response_type=code&client_id=c1
 //    授权码模式获取授权码: localhost:53020/uaa/oauth/authorize?client_id=c1&response_type=code&scope=ROLE_ADMIN&redirect_URI=https://www.baidu.com
     /*1.令牌endpoint,获取token令牌: http://localhost:53020/uaa/oauth/token
  post请求加上6个参数:

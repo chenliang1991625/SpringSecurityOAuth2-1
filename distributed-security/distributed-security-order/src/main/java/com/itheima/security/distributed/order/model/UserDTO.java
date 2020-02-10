@@ -1,5 +1,6 @@
 package com.itheima.security.distributed.order.model;
 import lombok.Data;
+
 import java.io.Serializable;
 /**
  * 用户信息
