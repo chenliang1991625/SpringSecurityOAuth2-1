@@ -1,0 +1,1 @@
+神坑:网关模块yml或properties配置文件zuul.routes.uaa-service.path = /uaa/**处第三位是访问的微服务名,如果要路由访问的微服务名修改此处也要修改
